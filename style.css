@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+}
+
+html,
+body {
+  --grey: hsl(240, 9%, 89%);
+  height: 100%;
+
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+main {
+  background: url(images/background.svg) no-repeat center/cover;
+  width: 100vw;
+  min-height: 812px;
+  height: 100vh;
+}
+
+.container {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+  color: var(--grey);
+}
+
+.avatar {
+  width: 10rem;
+  margin: 11.5rem auto 0;
+  position: relative;
+}
+
+.avatar span {
+  position: absolute;
+  top: -15px;
+  z-index: 1;
+  animation: rotated 10s linear infinite;
+}
+
+.avatar > img {
+  width: 10rem;
+  height: 11.5rem;
+
+  object-fit: cover;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+p {
+  margin-top: 1.5rem;
+}
+
+ul {
+  margin-top: 3rem;
+  list-style: none;
+  padding: 0;
+
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+li a {
+  transition: 0.3s;
+  display: inline-block;
+}
+
+li a:hover {
+  transform: translateY(-10px);
+}
+
+/* Stamp Animation Rocketseat */
+
+@-webkit-keyframes rotated {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotated {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/* Media Query */
+
+@media (min-width: 720px) {
+  main {
+    background: url(images/background-desktop.svg) no-repeat center/cover;
+    min-height: 740px;
+  }
+
+  ul {
+    margin-top: 2.5rem;
+  }
+}
+
+@media (min-width: 960px) {
+  main {
+    background: url(images/background-desktop.svg) no-repeat center/cover;
+    min-height: 740px;
+  }
+
+  ul {
+    margin-top: 2.5rem;
+  }
+}
