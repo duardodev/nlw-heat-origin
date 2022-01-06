@@ -1,5 +1,5 @@
 const linksSocialMedia = {
-  github: 'https://github.com/eduardoalmeida45',
+  github: 'https://github.com/mrxcoding',
   instagram: 'https://instagram.com/eduardoalmeida280',
   linkedin: 'https://www.linkedin.com/in/deivit-eduardo-1aa65420b/',
   email: 'mailto:eduardoalmeida5547@gmail.com'
@@ -15,18 +15,16 @@ function changeSocialMediaLinks() {
 
 changeSocialMediaLinks()
 
-// Typing Animation
+function getGithubProfileInfos() {
+  const url = "https://api.github.com/users/mrxcoding"
 
-function typeWriter(element) {
-  const textArray = element.innerHTML.split('')
-  element.innerHTML = ''
-  textArray.forEach((letter, i) => {
-    setTimeout(() => (element.innerHTML += letter), 75 * i)
-  })
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      userName.textContent = data.name
+      userBio.textContent = data.bio
+      userImage.src = data.avatar_url
+    })
 }
 
-const nameUser = document.querySelector('h1')
-typeWriter(nameUser)
-
-const aboutUser = document.querySelector('p')
-typeWriter(aboutUser)
+getGithubProfileInfos()
