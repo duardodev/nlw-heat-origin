@@ -1,5 +1,5 @@
 const linksSocialMedia = {
-  github: 'https://github.com/mrxcoding',
+  github: 'https://github.com/sampaiocode',
   instagram: 'https://instagram.com/eduardoalmeida280',
   linkedin: 'https://www.linkedin.com/in/deivit-eduardo-1aa65420b/',
   email: 'mailto:eduardoalmeida5547@gmail.com'
@@ -16,7 +16,7 @@ function changeSocialMediaLinks() {
 changeSocialMediaLinks()
 
 function getGithubProfileInfos() {
-  const url = "https://api.github.com/users/mrxcoding"
+  const url = "https://api.github.com/users/sampaiocode"
 
   fetch(url)
     .then(response => response.json())
