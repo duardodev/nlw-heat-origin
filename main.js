@@ -1,6 +1,6 @@
 const linksSocialMedia = {
   github: 'https://github.com/sampaiocode',
-  instagram: 'https://instagram.com/eduardoalmeida280',
+  instagram: 'https://www.instagram.com/im_duardo07',
   linkedin: 'https://www.linkedin.com/in/deivit-eduardo-1aa65420b/',
   email: 'mailto:eduardoalmeida5547@gmail.com'
 }
